@@ -15,17 +15,23 @@ public class LinkedListMain {
 		}
 		list1.show();
 		if (list1.search(30) == null) {
-			System.out.println("\nElement not  found");
+			System.out.println("Element not  found");
 		} else {
-			System.out.println("\nElement found");
+			System.out.println("Element found");
 		}
 
 		System.out.println("\n");
 
 		LinkedList<Integer> list2 = new LinkedList<>();
 		list2.add(56);
-		list2.add(70);
 		list2.add(30);
+		list2.add(70);
+		list2.show();
+		if (!list2.searchAndInsert(30, 40)) {
+			System.out.println("Element not  found");
+		} else {
+			System.out.println("Element found and inserted");
+		}
 		list2.show();
 		Integer popLastElement = list2.popLast();
 		if (popLastElement == null) {
