@@ -40,13 +40,28 @@ public class LinkedList<T> {
 	}
 
 	public T popFirst() {
-        if (head == null) {
-            return null;
-        } else {
-            T data = head.data;
-            head = head.next;
-            return data;
-        }
+		if (head == null) {
+			return null;
+		} else {
+			T data = head.data;
+			head = head.next;
+			return data;
+		}
+	}
+
+	public T popLast() {
+		if (head == null) {
+			return null;
+		} else {
+			Node<T> temp = head;
+			while (temp.next != tail) {
+				temp = temp.next;
+			}
+			T data = tail.data;
+			temp.next = null;
+			tail = temp;
+			return data;
+		}
 	}
 
 	public void show() {
