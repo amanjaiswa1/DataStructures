@@ -4,7 +4,7 @@ public class Queue {
 	LinkedList<Integer> queue = new LinkedList<>();
 
 	public void enqueue(Integer data) {
-		queue.add(data);
+		queue.append(data);
 	}
 
 	public void dequeue() {
